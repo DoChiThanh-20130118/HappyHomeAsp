@@ -1,0 +1,374 @@
+﻿@using HappyHomeAsp.MVC.Models
+@{
+    ViewBag.Title = "Chi tiết bài viết";
+    ViewBag.Id = "blog-detail";
+    ViewBag.Class = "blog";
+}
+
+<div id="wrapper-site">
+    <div id="content-wrapper">
+        <div id="main">
+            <div class="page-home">
+
+                <!-- breadcrumb -->
+                <nav class="breadcrumb-bg">
+                    <div class="container no-index">
+                        <div class="breadcrumb">
+                            <ol>
+                                <li>
+                                    <a href="@Url.Action("Index","Index","Index")">
+                                        <span>Trang chủ</span>
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="@Url.Action("Index","BlogListSidebarLeftPage","Index")">
+                                        <span>Danh mục bài viết</span>
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="#">
+                                        <span>Chi tiết bài viết</span>
+                                    </a>
+                                </li>
+                            </ol>
+                        </div>
+                    </div>
+                </nav>
+                <div class="container">
+                    <div class="content">
+                        <div class="row">
+                            <div class="sidebar-3 sidebar-collection col-lg-3 col-md-3 col-sm-4">
+
+                                <!-- category -->
+                                <div class="sidebar-block">
+                                    <div class="title-block">Thể loại</div>
+                                    <div class="block-content">
+                                        <div class="cateTitle hasSubCategory open level1">
+                                            <span class="arrow collapse-icons collapsed" data-toggle="collapse" data-target="#livingroom" aria-expanded="false" role="status">
+                                                <i class="zmdi zmdi-minus"></i>
+                                                <i class="zmdi zmdi-plus"></i>
+                                            </span>
+                                            <a class="cateItem" href="#">PHÒNG KHÁCH</a>
+                                            <div class="subCategory collapse" id="livingroom" aria-expanded="true" role="status">
+
+                                                <div class="cateTitle">
+                                                    <a href="#" class="cateItem">Ghế sofa</a>
+                                                </div>
+                                                <div class="cateTitle">
+                                                    <a href="#" class="cateItem">Bàn trà</a>
+                                                </div>
+                                                <div class="cateTitle">
+                                                    <a href="#" class="cateItem">Đèn trần</a>
+                                                </div>
+                                                <div class="cateTitle">
+                                                    <a href="#" class="cateItem">Kệ tivi</a>
+                                                </div>
+                                                <div class="cateTitle">
+                                                    <a href="#" class="cateItem">Ghế bành</a>
+                                                </div>
+                                                <div class="cateTitle">
+                                                    <a href="#" class="cateItem">Thảm sàn</a>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="cateTitle hasSubCategory open level1">
+                                            <span class="arrow collapsed collapse-icons" data-toggle="collapse" data-target="#bathroom" aria-expanded="false" role="status">
+                                                <i class="zmdi zmdi-minus"></i>
+                                                <i class="zmdi zmdi-plus"></i>
+                                            </span>
+                                            <a class="cateItem" href="#">PHÒNG TẮM</a>
+                                            <div class="subCategory collapse" id="bathroom" aria-expanded="false" role="status">
+                                                <div class="cateTitle">
+                                                    <a href="#" class="cateItem">Chậu rửa mặt</a>
+                                                </div>
+                                                <div class="cateTitle">
+                                                    <a href="#" class="cateItem">Gương nhà tắm</a>
+                                                </div>
+                                                <div class="cateTitle">
+                                                    <a href="#" class="cateItem">Vòi sen</a>
+                                                </div>
+                                                <div class="cateTitle">
+                                                    <a href="#" class="cateItem">Bồn tắm</a>
+                                                </div>
+                                                <div class="cateTitle">
+                                                    <a href="#" class="cateItem">Kệ inox</a>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="cateTitle hasSubCategory open level1">
+                                            <span class="arrow collapsed collapse-icons" data-toggle="collapse" data-target="#diningroom" aria-expanded="false" role="status">
+                                                <i class="zmdi zmdi-minus"></i>
+                                                <i class="zmdi zmdi-plus"></i>
+                                            </span>
+                                            <a class="cateItem" href="#">PHÒNG ĂN</a>
+                                            <div class="subCategory collapse" id="diningroom" aria-expanded="true" role="status">
+                                                <div class="cateTitle">
+                                                    <a href="#" class="cateItem">Bộ bàn ghế ăn</a>
+                                                </div>
+                                                <div class="cateTitle">
+                                                    <a href="#" class="cateItem">Ghế ăn</a>
+                                                </div>
+                                                <div class="cateTitle">
+                                                    <a href="#" class="cateItem">Tủ trang trí</a>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="cateTitle hasSubCategory open level1">
+                                            <span class="arrow collapsed collapse-icons" data-toggle="collapse" data-target="#bedroom" aria-expanded="false" role="status">
+                                                <i class="zmdi zmdi-minus"></i>
+                                                <i class="zmdi zmdi-plus"></i>
+                                            </span>
+                                            <a class="cateItem" href="#">PHÒNG NGỦ</a>
+                                            <div class="subCategory collapse" id="bedroom" aria-expanded="true" role="status">
+                                                <div class="cateTitle">
+                                                    <a href="#" class="cateItem">Giường ngủ </a>
+                                                </div>
+                                                <div class="cateTitle">
+                                                    <a href="#" class="cateItem">Tủ quần áo</a>
+                                                </div>
+                                                <div class="cateTitle">
+                                                    <a href="#" class="cateItem">Bàn trang điểm</a>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="cateTitle hasSubCategory open level1">
+                                            <span class="arrow collapsed collapse-icons" data-toggle="collapse" data-target="#kitchen" aria-expanded="false" role="status">
+                                                <i class="zmdi zmdi-minus"></i>
+                                                <i class="zmdi zmdi-plus"></i>
+                                            </span>
+                                            <a class="cateItem" href="#">PHÒNG BẾP</a>
+                                            <div class="subCategory collapse" id="kitchen" aria-expanded="true" role="status">
+                                                <div class="cateTitle">
+                                                    <a href="#" class="cateItem">Bếp</a>
+                                                </div>
+                                                <div class="cateTitle">
+                                                    <a href="#" class="cateItem">Kệ /Tủ bếp</a>
+                                                </div>
+
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+
+
+                                <!-- recent posts -->
+                                <div class="sidebar-block">
+                                    <div class="title-block">Bài đăng gần đây</div>
+                                    <div class="post-item-content">
+                                        <div>
+                                            <div class="late-item first-child">
+                                                <a href="@Url.Action("Index","BlogDetail","Index")">
+                                                    <p class="Rcontent-title">Mẹo phối giữa màu sơn tường và đồ nội thất cho không gian sống thêm hoàn hảo</p>
+                                                </a>
+                                                <span>
+                                                    <i class="zmdi zmdi-comments"></i>10 Bình luận
+                                                </span>
+                                                <span>
+                                                    <i class="zmdi zmdi-calendar-note"></i>07/11/2022
+                                                </span>
+                                                <p class="description">
+                                                    Phối màu nội thất sao cho đẹp, sang trọng, hiện đại là cả nghệ thuật của nhà thiết kế nội thất. Nội thất có đẹp cũng phải phối màu ăn ý với nhau mới có thể tạo ra một không gian đẹp...
+                                                </p>
+                                                <p class="remove">
+                                                    <a href="@Url.Action("Index","Index","Index")">XEM THÊM</a>
+                                                </p>
+                                            </div>
+                                        </div>
+                                        <div>
+                                            <div class="late-item">
+                                                <a href="@Url.Action("Index","Index","Index")">
+                                                    <p class="content-title">300+ Mẫu tủ bếp gỗ tự nhiên bền, đẹp, hiện đại giá tốt nhất 2022</p>
+                                                </a>
+                                                <span>
+                                                    <i class="zmdi zmdi-comments"></i>20 Bình luận
+                                                </span>
+                                                <span>
+                                                    <i class="zmdi zmdi-calendar-note"></i>05/11/2022
+                                                </span>
+                                                <p class="description">
+                                                    Tủ bếp là thiết bị nội thất không thể thiếu trong mọi căn bếp của gia đình Việt. Đặc biệt, tủ bếp gỗ tự nhiên với giá trị thẩm mỹ cao và độ bền chắc lâu năm đang rất được lòng người sử dụng. Hãy cùng nội thất HAPPYHOME tham khảo...
+                                                </p>
+                                                <p class="remove">
+                                                    <a href="@Url.Action("Index","Index","Index")">XEM THÊM</a>
+                                                </p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <!-- product tag -->
+                                <div class="sidebar-block product-tags">
+                                    <div class="title-block">
+                                        Thẻ Blog
+                                    </div>
+                                    <div class="block-content">
+                                        <ul class="listSidebarBlog list-unstyled">
+                                            <li>
+                                                <a href="#" title="Show products matching tag Hot Trend">Hot</a>
+                                            </li>
+
+                                            <li>
+                                                <a href="#" title="Show products matching tag Jewelry">Sofa</a>
+                                            </li>
+
+                                            <li>
+                                                <a href="#" title="Show products matching tag New Arrivals">Bàn ghế</a>
+                                            <li>
+                                                <a href="#" title="Show products matching tag New Arrivals">Bàn trang điểm</a>
+                                            </li>
+                                            <li>
+                                                <a href="#" title="Show products matching tag New Arrivals">Màu sắc</a>
+
+                                        </ul>
+                                    </div>
+                                </div>
+
+                                <!-- advertising -->
+                                <div class="sidebar-block group-image-special">
+                                    <div class="effect">
+                                        <a href="#">
+                                            <img class="img-fluid" src="~/Template/img/blog/advertising.jpg" alt="banner-2" title="banner-2">
+                                        </a>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-sm-8 col-lg-9 col-md-9 flex-xs-first main-blogs">
+                                <h3>@Model.Title</h3>
+                                <div class="hover-after">
+                                    <img src="@Model.getImageArticle(0)" alt="img" class="img-fluid">
+                                </div>
+                                <div class="late-item">
+                                    <p>
+                                      @Model.Content
+                                    </p>
+
+
+                                    <div class="border-detail">
+                                        <p class="post-info float-left">
+                                            <span>Ngày đăng 07/11/2022</span>
+                                            <span>3 Bình luận</span>
+                                            <span>#trangtri</span>
+                                        </p>
+                                        <div class="btn-group">
+                                            <a href="#">
+                                                <i class="zmdi zmdi-share"></i>
+                                                <span>Chia sẻ</span>
+                                            </a>
+                                            <a href="#" class="email">
+                                                <i class="fa fa-envelope" aria-hidden="true"></i>
+                                                <span>Gửi đến bạn bè</span>
+                                            </a>
+                                            <a href="#" class="print">
+                                                <i class="zmdi zmdi-print"></i>
+                                                <span>In</span>
+                                            </a>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class="admin">
+                                  
+                                    <div class="info">
+                                      
+                                    </div>
+                                </div>
+                                <div class="related">
+                                    <h2 class="title-block">TIN TỨC LIÊN QUAN</h2>
+                                    <div class="main-blogs">
+                                        <div class="row">
+                                            <div class="col-md-4">
+                                                <div class="hover-after">
+                                                    <a href="@Url.Action("Index","Index","Index")">
+                                                        <img src="~/Template/img/blog/11.jpg" alt="img" class="img-fluid">
+                                                    </a>
+                                                </div>
+                                                <div class="late-item">
+                                                    <p class="content-title">
+                                                        <a href="@Url.Action("Index","Index","Index")">5 ý tưởng lắp đầy những khoảng trống cho căn phòng của bạn</a>
+                                                    </p>
+                                                    <p class="description">
+                                                        Đã bao giờ bạn cảm thấy không gian phòng của bạn vẫn còn trống trải và muốn sắm thêm nội thất? Đã bao giờ bạn muốn lấp đầy những gian tường nhà nhưng lại không biết bắt đầu từ đâu?
+                                                        Vậy thì đây chắc chắn sẽ là bài viết dành cho bạn.
+                                                    </p>
+                                                </div>
+                                            </div>
+                                            <div class="col-md-4">
+                                                <div class="hover-after">
+                                                    <a href="@Url.Action("Index","Index","Index")">
+                                                        <img src="~/Template/img/blog/8.jpg" alt="img" class="img-fluid">
+                                                    </a>
+                                                </div>
+                                                <div class="late-item">
+                                                    <p class="content-title">
+                                                        <a href="@Url.Action("Index","Index","Index")">Tiết kiệm không gian căn hộ chung cư một cách thông minh</a>
+                                                    </p>
+                                                    <p class="description">
+                                                        Với những căn hộ chung cư, diện tích không gian sẽ khá hạn chế để có thể tối ưu hóa không gian hơn.
+                                                        Việc tìm hiểu và thiết kế sao cho căn hộ vừa thoáng mát, thoải mái, vừa đa dụng và sành điệu đang là nhu cầu được rất nhiều người quan tâm đến.
+                                                    </p>
+                                                </div>
+                                            </div>
+                                            <div class="col-md-4">
+                                                <div class="hover-after">
+                                                    <a href="blog-detail.html">
+                                                        <img src="~/Template/img/blog/12.jpg" alt="img" class="img-fluid">
+                                                    </a>
+                                                </div>
+                                                <div class="late-item">
+                                                    <p class="content-title">
+                                                        <a href="blog-detail.html">Trang hoàng phòng khách đón mùa mới</a>
+                                                    </p>
+                                                    <p class="description">
+                                                        Sắp xếp, làm mới lại không gian sống cũng là một trong những cách nhanh nhất mang đến cảm giác tươi mới, hạnh phúc,
+                                                        tràn đầy năng lượng cho bạn và những thành viên trong gia đình. Bây giờ, hãy cùng khám phá những yếu tố tạo nên gian phòng khách hiện đại,
+                                                        độc đáo để có thêm cảnh hứng mới cho không gian của bạn.
+                                                    </p>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="reply late-item">
+                                    <div class="blog-comment" id="blog-comment">
+                                        <h2 class="title-block">Bình luận</h2>
+                                    
+                                    </div>
+                                    <div class="comment-content">
+                                      
+                  
+                                <div class="submit-comment" id="respond">
+                                    <h2 class="title-block">THÊM BÌNH LUẬN</h2>
+                                    <div id="commentInput">
+                                        <form action="#" method="post" id="commentform">
+                                            <input type="hidden" name="comment_parent" id="comment_parent" value="0">
+                                            <div class="row">
+                                                <div class="form-group col col-sm-12 col-md-4 ">
+                                                    <input type="text" class="inputName form-control" name="name" placeholder="Tên của bạn *">
+                                                </div>
+                                                <div class="form-group col col-sm-12  col-md-4">
+                                                    <input type="text" class="inputMail form-control" name="mail" placeholder="Địa chỉ Email *">
+                                                </div>
+                                                <div class="form-group col col-sm-12  col-md-4">
+                                                    <input type="text" class="form-control" name="website" placeholder="Biệt danh của bạn">
+                                                </div>
+                                            </div>
+                                            <div class="row">
+                                                <div class="form-group col col-md-12">
+                                                    <textarea tabindex="4" class="inputContent form-control grey" rows="10" name="comment" placeholder="Bình luận của bạn"></textarea>
+                                                </div>
+                                            </div>
+                                            <div class="submit">
+                                                <input type="submit" name="addComment" id="submitComment" class="btn btn-default" value="Đăng bình luận">
+                                            </div>
+                                        </form>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+

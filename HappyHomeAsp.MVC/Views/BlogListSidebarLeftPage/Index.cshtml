@@ -1,0 +1,311 @@
+﻿@using HappyHomeAsp.MVC.Models
+@using PagedList.Mvc
+@using PagedList
+@model IPagedList<HappyHomeAsp.MVC.Models.Article>
+@{
+    ViewBag.Title = "Danh mục bài viết";
+    ViewBag.Id = "blog-list-sidebar-left";
+    ViewBag.CLass = "blog";
+}
+
+
+<div id="wrapper-site">
+    <div id="content-wrapper">
+        <div id="main">
+            <div class="page-home">
+
+                <!-- breadcrumb -->
+                <nav class="breadcrumb-bg">
+                    <div class="container no-index">
+                        <div class="breadcrumb">
+                            <ol>
+                                <li>
+                                    <a href="@Url.Action("Index","Index","Index")">
+                                        <span>Trang chủ</span>
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="#">
+                                        <span>Danh mục bài viết</span>
+                                    </a>
+                                </li>
+
+                            </ol>
+                        </div>
+                    </div>
+                </nav>
+                <div class="container">
+                    <div class="content">
+                        <div class="row">
+                            <div class="sidebar-3 sidebar-collection col-lg-3 col-md-3 col-sm-4">
+
+                                <!-- category -->
+                                <div class="sidebar-block">
+                                    <div class="title-block">Thể loại</div>
+                                    <div class="block-content">
+                                        <div class="cateTitle hasSubCategory open level1">
+                                            <span class="arrow collapse-icons collapsed" data-toggle="collapse" data-target="#livingroom" aria-expanded="false" role="status">
+                                                <i class="zmdi zmdi-minus"></i>
+                                                <i class="zmdi zmdi-plus"></i>
+                                            </span>
+                                            <a class="cateItem" href="#">PHÒNG KHÁCH</a>
+                                            <div class="subCategory collapse" id="livingroom" aria-expanded="true" role="status">
+
+                                                <div class="cateTitle">
+                                                    <a href="#" class="cateItem">Ghế sofa</a>
+                                                </div>
+                                                <div class="cateTitle">
+                                                    <a href="#" class="cateItem">Bàn trà</a>
+                                                </div>
+                                                <div class="cateTitle">
+                                                    <a href="#" class="cateItem">Đèn trần</a>
+                                                </div>
+                                                <div class="cateTitle">
+                                                    <a href="#" class="cateItem">Kệ tivi</a>
+                                                </div>
+                                                <div class="cateTitle">
+                                                    <a href="#" class="cateItem">Ghế bành</a>
+                                                </div>
+                                                <div class="cateTitle">
+                                                    <a href="#" class="cateItem">Thảm sàn</a>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="cateTitle hasSubCategory open level1">
+                                            <span class="arrow collapsed collapse-icons" data-toggle="collapse" data-target="#bathroom" aria-expanded="false" role="status">
+                                                <i class="zmdi zmdi-minus"></i>
+                                                <i class="zmdi zmdi-plus"></i>
+                                            </span>
+                                            <a class="cateItem" href="#">PHÒNG TẮM</a>
+                                            <div class="subCategory collapse" id="bathroom" aria-expanded="false" role="status">
+                                                <div class="cateTitle">
+                                                    <a href="#" class="cateItem">Chậu rửa mặt</a>
+                                                </div>
+                                                <div class="cateTitle">
+                                                    <a href="#" class="cateItem">Gương nhà tắm</a>
+                                                </div>
+                                                <div class="cateTitle">
+                                                    <a href="#" class="cateItem">Vòi sen</a>
+                                                </div>
+                                                <div class="cateTitle">
+                                                    <a href="#" class="cateItem">Bồn tắm</a>
+                                                </div>
+                                                <div class="cateTitle">
+                                                    <a href="#" class="cateItem">Kệ inox</a>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="cateTitle hasSubCategory open level1">
+                                            <span class="arrow collapsed collapse-icons" data-toggle="collapse" data-target="#diningroom" aria-expanded="false" role="status">
+                                                <i class="zmdi zmdi-minus"></i>
+                                                <i class="zmdi zmdi-plus"></i>
+                                            </span>
+                                            <a class="cateItem" href="#">PHÒNG ĂN</a>
+                                            <div class="subCategory collapse" id="diningroom" aria-expanded="true" role="status">
+                                                <div class="cateTitle">
+                                                    <a href="#" class="cateItem">Bộ bàn ghế ăn</a>
+                                                </div>
+                                                <div class="cateTitle">
+                                                    <a href="#" class="cateItem">Ghế ăn</a>
+                                                </div>
+                                                <div class="cateTitle">
+                                                    <a href="#" class="cateItem">Tủ trang trí</a>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="cateTitle hasSubCategory open level1">
+                                            <span class="arrow collapsed collapse-icons" data-toggle="collapse" data-target="#bedroom" aria-expanded="false" role="status">
+                                                <i class="zmdi zmdi-minus"></i>
+                                                <i class="zmdi zmdi-plus"></i>
+                                            </span>
+                                            <a class="cateItem" href="#">PHÒNG NGỦ</a>
+                                            <div class="subCategory collapse" id="bedroom" aria-expanded="true" role="status">
+                                                <div class="cateTitle">
+                                                    <a href="#" class="cateItem">Giường ngủ </a>
+                                                </div>
+                                                <div class="cateTitle">
+                                                    <a href="#" class="cateItem">Tủ quần áo</a>
+                                                </div>
+                                                <div class="cateTitle">
+                                                    <a href="#" class="cateItem">Bàn trang điểm</a>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="cateTitle hasSubCategory open level1">
+                                            <span class="arrow collapsed collapse-icons" data-toggle="collapse" data-target="#kitchen" aria-expanded="false" role="status">
+                                                <i class="zmdi zmdi-minus"></i>
+                                                <i class="zmdi zmdi-plus"></i>
+                                            </span>
+                                            <a class="cateItem" href="#">PHÒNG BẾP</a>
+                                            <div class="subCategory collapse" id="kitchen" aria-expanded="true" role="status">
+                                                <div class="cateTitle">
+                                                    <a href="#" class="cateItem">Bếp</a>
+                                                </div>
+                                                <div class="cateTitle">
+                                                    <a href="#" class="cateItem">Kệ /Tủ bếp</a>
+                                                </div>
+
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <!-- recent posts -->
+                                <div class="sidebar-block">
+                                    <div class="title-block">Bài đăng gần đây</div>
+                                    <div class="post-item-content">
+                                        <div>
+                                            <div class="late-item first-child">
+                                                <a href="@Url.Action("Index","BlogDetail","Index")">
+                                                    <p class="content-title">Mẹo phối giữa màu sơn tường và đồ nội thất cho không gian sống thêm hoàn hảo</p>
+                                                </a>
+                                                <span>
+                                                    <i class="zmdi zmdi-comments"></i>10 comment
+                                                </span>
+                                                <span>
+                                                    <i class="zmdi zmdi-calendar-note"></i>07/11/2022
+                                                </span>
+                                                <p class="description">
+                                                    Phối màu nội thất sao cho đẹp, sang trọng, hiện đại là cả nghệ thuật của nhà thiết kế nội thất. Nội thất có đẹp cũng phải phối màu ăn ý với nhau mới có thể tạo ra một không gian đẹp...
+                                                </p>
+                                                <p class="remove">
+                                                    <a href="blog-detail.html">XEM THÊM</a>
+                                                </p>
+                                            </div>
+                                        </div>
+                                        <div>
+                                            <div class="late-item">
+                                                <a href="blog-detail.html">
+                                                    <p class="content-title">300+ Mẫu tủ bếp gỗ tự nhiên bền, đẹp, hiện đại giá tốt nhất 2022</p>
+                                                </a>
+                                                <span>
+                                                    <i class="zmdi zmdi-comments"></i>20 comment
+                                                </span>
+                                                <span>
+                                                    <i class="zmdi zmdi-calendar-note"></i>05/11/2022
+                                                </span>
+                                                <p class="description">
+                                                    Tủ bếp là thiết bị nội thất không thể thiếu trong mọi căn bếp của gia đình Việt. Đặc biệt, tủ bếp gỗ tự nhiên với giá trị thẩm mỹ cao và độ bền chắc lâu năm đang rất được lòng người sử dụng. Hãy cùng nội thất HAPPYHOME tham khảo...
+                                                </p>
+                                                <p class="remove">
+                                                    <a href="blog-detail.html">XEM THÊM</a>
+                                                </p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <!-- product tag -->
+                                <div class="sidebar-block product-tags">
+                                    <div class="title-block">
+                                        Thẻ Blog
+                                    </div>
+                                    <div class="block-content">
+                                        <ul class="listSidebarBlog list-unstyled">
+                                            <li>
+                                                <a href="#" title="Show products matching tag Hot Trend">Hot</a>
+                                            </li>
+
+                                            <li>
+                                                <a href="#" title="Show products matching tag Jewelry">Sofa</a>
+                                            </li>
+
+                                            <li>
+                                                <a href="#" title="Show products matching tag New Arrivals">Bàn ghế</a>
+                                            <li>
+                                                <a href="#" title="Show products matching tag New Arrivals">Bàn trang điểm</a>
+                                            </li>
+                                            <li>
+                                                <a href="#" title="Show products matching tag New Arrivals">Màu sắc</a>
+
+                                        </ul>
+                                    </div>
+                                </div>
+
+                                <!-- advertising -->
+                                <div class="sidebar-block group-image-special">
+                                    <div class="effect">
+                                        <a href="#">
+                                            <img class="img-fluid" src="~/Template/img/blog/advertising.jpg" alt="banner-2" title="banner-2">
+                                        </a>
+                                    </div>
+                                </div>
+
+                            </div>
+                            <div class="col-sm-8 col-lg-9 col-md-9 flex-xs-first main-blogs">
+                                <h2>Bài đăng gần đây</h2>
+                                @if (Model != null && Model.Any())
+                                {
+                                    var i = 1;
+
+                                    foreach (Article article in Model)
+                                    {
+                                        <div class="list-content row">
+                                            <div class="hover-after col-md-5 col-xs-12">
+                                                <a href="@Url.Action("Index", "BlogDetail", new { id = article.Article_id })">
+                                                    <img src="@article.selectFirstImageArticle()" alt="img">
+                                                </a>
+                                            </div>
+                                            <div class="late-item col-md-7 col-xs-12">
+                                                <p class="content-title">
+                                                    <a href="@Url.Action("Index", "BlogDetail", new { id = article.Article_id })">
+                                                        @article.Title
+                                                    </a>
+                                                </p>
+                                                <p class="post-info">
+                                                    <span>NGÀY ĐĂNG 07/11/2022</span>
+                                                    <span>3 Bình luận</span>
+                                                    <span>#trangtri</span>
+                                                </p>
+                                                <p class="description">
+                                                    @article.Content
+                                                </p>
+                                                <span class="view-more">
+                                                    <a href="@Url.Action("Index", "BlogDetail", new { id = article.Article_id })">Xem thêm</a>
+                                                </span>
+                                            </div>
+                                        </div>
+                                    }
+                                    i++;
+                                }
+                                <div class="page-list col">
+
+                                    <br />
+                                    Page @(Model.PageCount < Model.PageNumber ? 0 : Model.PageNumber) of @Model.PageCount
+
+                                    @Html.PagedListPager(Model, page => Url.Action("Index",
+                                        new { page, productTypeId = ViewBag.ProductTypeId, pageSize = ViewBag.PageSize }))
+
+
+                                    @*<ul class="justify-content-center d-flex">
+                                            <li>
+                                                <a rel="prev" href="#" class="previous disabled js-search-link">
+                                                    Về trước
+                                                </a>
+                                            </li>
+                                            <li class="current active">
+                                                <a rel="nofollow" href="#" class="disabled js-search-link">
+                                                    1
+                                                </a>
+                                            </li>
+                                            <li>
+                                                <a rel="nofollow" href="#" class="disabled js-search-link">
+                                                    2
+                                                </a>
+                                            </li>
+                                            <li>
+                                                <a rel="next" href="#" class="next disabled js-search-link">
+                                                    Tiếp theo
+                                                </a>
+                                            </li>
+                                        </ul>*@
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+

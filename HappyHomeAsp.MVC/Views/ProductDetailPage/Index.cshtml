@@ -1,0 +1,662 @@
+﻿@using HappyHomeAsp.MVC.Models
+@{
+    ViewBag.Title = "Chi tiết sản phẩm";
+    ViewBag.Id = "product-detail";
+}
+
+
+
+
+<!-- main content -->
+<div class="main-content">
+    <div id="wrapper-site">
+        <div id="content-wrapper">
+            <div id="main">
+                <div class="page-home">
+
+                    <!-- breadcrumb -->
+                    <nav class="breadcrumb-bg">
+                        <div class="container no-index">
+                            <div class="breadcrumb">
+                                <ol>
+                                    <li>
+                                        <a href="#">
+                                            <span>Trang chủ</span>
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a href="#">
+                                            <span>Sản phẩm</span>
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a href="#">
+                                            <span>@Model.Name</span>
+                                        </a>
+                                    </li>
+                                </ol>
+                            </div>
+                        </div>
+                    </nav>
+                    <div class="container">
+                        <div class="content">
+                            <div class="row">
+                                <div class="sidebar-3 sidebar-collection col-lg-3 col-md-3 col-sm-4">
+
+                                    <!-- category -->
+                                    <div class="sidebar-block">
+                                        <div class="title-block">Thể loại</div>
+                                        <div class="block-content">
+                                            <div class="cateTitle hasSubCategory open level1">
+                                                <span class="arrow collapse-icons collapsed" data-toggle="collapse" data-target="#livingroom">
+                                                    <i class="zmdi zmdi-minus"></i>
+                                                    <i class="zmdi zmdi-plus"></i>
+                                                </span>
+                                                <a class="cateItem" href="#">Phòng khách</a>
+                                                <div class="subCategory collapse" id="livingroom" aria-expanded="true" role="status">
+                                                    <div class="cateTitle">
+                                                        <a href="#" class="cateItem">Bàn </a>
+                                                        <div class="subCategory collapse" id="subCategory-fruits" aria-expanded="true" role="status">
+                                                            <!-- <div class="cateTitle">
+                                                                <a href="#" class="cateItem">Bảng phụ</a>
+                                                            </div> -->
+                                                            <!-- <div class="cateTitle">
+                                                                <a href="#" class="cateItem">CHÁY</a>
+                                                            </div>
+                                                            <div class="cateTitle">
+                                                                <a href="#" class="cateItem">CHÁY</a>
+                                                            </div> -->
+                                                            <div class="cateTitle">
+                                                                <a href="#" class="cateItem">đèn sàn</a>
+                                                            </div>
+                                                            <div class="cateTitle">
+                                                                <a href="#" class="cateItem">ghế không có lưng dựa</a>
+                                                            </div>
+                                                            <div class="cateTitle">
+                                                                <a href="#" class="cateItem">ghế bành</a>
+                                                            </div>
+                                                            <div class="cateTitle">
+                                                                <a href="#" class="cateItem">ghế sofa</a>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                    <!-- <div class="cateTitle">
+                                                        <a href="#" class="cateItem">CHÁY</a>
+                                                    </div>
+                                                    <div class="cateTitle">
+                                                        <a href="#" class="cateItem">CHÁY</a>
+                                                    </div> -->
+                                                    <div class="cateTitle">
+                                                        <a href="#" class="cateItem">đèn sàn</a>
+                                                    </div>
+                                                    <div class="cateTitle">
+                                                        <a href="#" class="cateItem">ghế không có lưng dựa</a>
+                                                    </div>
+                                                    <div class="cateTitle">
+                                                        <a href="#" class="cateItem">ghế bành</a>
+                                                    </div>
+                                                    <div class="cateTitle">
+                                                        <a href="#" class="cateItem">gối</a>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="cateTitle hasSubCategory open level1">
+                                                <span class="arrow collapsed collapse-icons" data-toggle="collapse" data-target="#bathroom">
+                                                    <i class="zmdi zmdi-minus"></i>
+                                                    <i class="zmdi zmdi-plus"></i>
+                                                </span>
+                                                <a class="cateItem" href="#">Phòng tắm</a>
+                                                <div class="subCategory collapse" id="bathroom">
+                                                    <!-- <div class="cateTitle">
+                                                        <a href="#" class="cateItem">TOMATO</a>
+                                                    </div> -->
+                                                    <div class="cateTitle">
+                                                        <a href="#" class="cateItem">Bồn cầu</a>
+                                                    </div>
+                                                    <div class="cateTitle">
+                                                        <a href="#" class="cateItem">Chậu rửa</a>
+                                                    </div>
+                                                    <div class="cateTitle">
+                                                        <a href="#" class="cateItem">Gương tắm</a>
+                                                    </div>
+                                                    <div class="cateTitle">
+                                                        <a href="#" class="cateItem">Bồn tắm</a>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="cateTitle hasSubCategory open level1">
+                                                <span class="arrow collapsed collapse-icons" data-toggle="collapse" data-target="#diningroom">
+                                                    <i class="zmdi zmdi-minus"></i>
+                                                    <i class="zmdi zmdi-plus"></i>
+                                                </span>
+                                                <a class="cateItem" href="#">Phòng bếp</a>
+                                                <div class="subCategory collapse" id="diningroom" aria-expanded="true" role="status">
+                                                    <div class="cateTitle">
+                                                        <a href="#" class="cateItem">Bàn ăn phòng bếp</a>
+                                                    </div>
+                                                    <div class="cateTitle">
+                                                        <a href="#" class="cateItem">Tủ bếp</a>
+                                                    </div>
+                                                    <div class="cateTitle">
+                                                        <a href="#" class="cateItem">Kệ bếp</a>
+                                                    </div>
+                                                    <!-- <div class="cateTitle">
+                                                        <a href="#" class="cateItem">BLACK BREAD</a>
+                                                    </div> -->
+                                                </div>
+                                            </div>
+                                            <div class="cateTitle hasSubCategory open level1">
+                                                <span class="arrow collapsed collapse-icons" data-toggle="collapse" data-target="#bedroom">
+                                                    <i class="zmdi zmdi-minus"></i>
+                                                    <i class="zmdi zmdi-plus"></i>
+                                                </span>
+                                                <a class="cateItem" href="#">Phòng ngủ</a>
+                                                <div class="subCategory collapse" id="bedroom" aria-expanded="true" role="status">
+                                                    <div class="cateTitle">
+                                                        <a href="#" class="cateItem">Giường ngủ</a>
+                                                    </div>
+                                                    <div class="cateTitle">
+                                                        <a href="#" class="cateItem">Tủ quần áo</a>
+                                                    </div>
+                                                    <div class="cateTitle">
+                                                        <a href="#" class="cateItem">Bàn trang điểm</a>
+                                                    </div>
+
+                                                </div>
+                                            </div>
+
+                                        </div>
+                                    </div>
+
+                                    <!-- best seller -->
+                                    <div class="sidebar-block">
+                                        <div class="title-block">
+                                            Sản phẩm bán tốt nhất
+                                        </div>
+                                        <div class="product-content tab-content">
+                                            <div class="row">
+
+                                                @foreach (Product p in ViewBag.get3ProductsBestSell)
+                                                {
+                                                    <!---->
+                                                    <div class="item col-md-12">
+                                                        <div class="product-miniature item-one first-item d-flex">
+                                                            <div class="thumbnail-container border">
+                                                                <a href="product-detail.html">
+                                                                    <img class="img-fluid image-cover" src="@p.getImageProduct(0)" alt="img">
+                                                                    <img class="img-fluid image-secondary" src="@p.getImageProduct(1)" alt="img">
+
+                                                                </a>
+                                                            </div>
+                                                            <div class="product-description">
+                                                                <div class="product-groups">
+                                                                    <div class="product-title">
+                                                                        <a href="product-detail.html">@p.Name</a>
+                                                                    </div>
+                                                                    <div class="rating">
+                                                                        <div class="star-content">
+                                                                            <div class="star"></div>
+                                                                            <div class="star"></div>
+                                                                            <div class="star"></div>
+                                                                            <div class="star"></div>
+                                                                            <div class="star"></div>
+                                                                        </div>
+                                                                    </div>
+                                                                    <div class="product-group-price">
+                                                                        <div class="product-price-and-shipping">
+                                                                            <span class="price">@p.Price_sell vnđ</span>
+                                                                        </div>
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                }
+                                            </div>
+                                        </div>
+
+                                    </div>
+
+                                    <!-- product tag -->
+                                    <div class="sidebar-block product-tags">
+                                        <div class="title-block">
+                                            Thẻ sản phẩm
+                                        </div>
+                                        <div class="block-content">
+                                            <ul class="listSidebarBlog list-unstyled">
+                                                <li>
+                                                    <a href="#" title="Show products matching tag Hot Trend">Xu hướng nổi bật</a>
+                                                </li>
+
+                                                <li>
+                                                    <a href="#" title="Show products matching tag Jewelry">Rẻ nhất</a>
+                                                </li>
+
+                                                <li>
+                                                    <a href="man.html" title="Show products matching tag Man">Đắt nhất</a>
+                                                </li>
+
+                                                <li>
+                                                    <a href="#" title="Show products matching tag Party">Mua nhiều nhất</a>
+                                                </li>
+
+                                                <li>
+                                                    <a href="#" title="Show products matching tag SamSung">Đang giảm giá</a>
+                                                </li>
+
+                                                <li>
+                                                    <a href="#" title="Show products matching tag Shirt Dresses">Bán chạy</a>
+                                                </li>
+
+                                            </ul>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-sm-8 col-lg-9 col-md-9">
+                                    <div class="main-product-detail">
+                                        <h2>@Model.Name</h2>
+                                        <div class="product-single row">
+                                            <div class="product-detail col-xs-12 col-md-5 col-sm-5">
+                                                <div class="page-content" id="content">
+                                                    <div class="images-container">
+                                                        <div class="js-qv-mask mask tab-content border">
+
+                                                            <div id="item1" class="tab-pane fade active in show">
+                                                                <img src="@Model.getImageProduct(0)" alt="img">
+                                                            </div>
+                                                            <div id="item2" class="tab-pane fade">
+                                                                <img src="@Model.getImageProduct(1)" alt="img">
+                                                            </div>
+                                                            <div id="item3" class="tab-pane fade">
+                                                                <img src="@Model.getImageProduct(2)" alt="img">
+                                                            </div>
+                                                            <div id="item4" class="tab-pane fade">
+                                                                <img src="@Model.getImageProduct(3)" alt="img">
+                                                            </div>
+
+                                                            <div class="layer hidden-sm-down" data-toggle="modal" data-target="#product-modal">
+                                                                <i class="fa fa-expand"></i>
+                                                            </div>
+                                                        </div>
+                                                        <ul class="product-tab nav nav-tabs d-flex">
+                                                            <li class="active col">
+                                                                <a href="#item1" data-toggle="tab" aria-expanded="true" class="active show">
+                                                                    <img src="@Model.getImageProduct(0)" alt="img">
+                                                                </a>
+                                                            </li>
+                                                            <li class="col">
+                                                                <a href="#item2" data-toggle="tab">
+                                                                    <img src="@Model.getImageProduct(1)" alt="img">
+                                                                </a>
+                                                            </li>
+                                                            <li class="col">
+                                                                <a href="#item3" data-toggle="tab">
+                                                                    <img src="@Model.getImageProduct(2)" alt="img">
+                                                                </a>
+                                                            </li>
+                                                            <li class="col">
+                                                                <a href="#item4" data-toggle="tab">
+                                                                    <img src="@Model.getImageProduct(3)" alt="img">
+                                                                </a>
+                                                            </li>
+
+                                                        </ul>
+                                                        <div class="modal fade" id="product-modal" role="dialog">
+                                                            <div class="modal-dialog">
+
+                                                                <!-- Modal content-->
+                                                                <div class="modal-content">
+                                                                    <div class="modal-header">
+                                                                        <div class="modal-body">
+                                                                            <div class="product-detail">
+                                                                                <div>
+                                                                                    <div class="images-container">
+                                                                                        <div class="js-qv-mask mask tab-content">
+                                                                                            <div id="modal-item1" class="tab-pane fade active in show">
+                                                                                                <img src="@Model.getImageProduct(0)" alt="img">
+                                                                                            </div>
+                                                                                            <div id="modal-item2" class="tab-pane fade">
+                                                                                                <img src="@Model.getImageProduct(1)" alt="img">
+                                                                                            </div>
+                                                                                            <div id="modal-item3" class="tab-pane fade">
+                                                                                                <img src="@Model.getImageProduct(2)" alt="img">
+                                                                                            </div>
+                                                                                           
+                                                                                        </div>
+                                                                                        <ul class="product-tab nav nav-tabs">
+                                                                                            <li class="active">
+                                                                                                <a href="#modal-item1" data-toggle="tab" class=" active show">
+                                                                                                    <img src="@Model.getImageProduct(0)" alt="img">
+                                                                                                </a>
+                                                                                            </li>
+                                                                                            <li>
+                                                                                                <a href="#modal-item2" data-toggle="tab">
+                                                                                                    <img src="@Model.getImageProduct(1)" alt="img">
+                                                                                                </a>
+                                                                                            </li>
+                                                                                            <li>
+                                                                                                <a href="#modal-item3" data-toggle="tab">
+                                                                                                    <img src="@Model.getImageProduct(2)" alt="img">
+                                                                                                </a>
+                                                                                            </li>
+                                                                                            
+                                                                                        </ul>
+                                                                                    </div>
+                                                                                </div>
+                                                                            </div>
+                                                                        </div>
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="product-info col-xs-12 col-md-7 col-sm-7">
+                                                <div class="detail-description">
+                                                    <div class="price-del">
+                                                        <span class="price">@Model.Price_sell vnđ</span>
+                                                        <span class="float-right">
+                                                            <span class="availb">khả dụng: </span>
+
+                                                            <span class="check">
+
+                                                                @if (Model.Status == 1)
+                                                                {
+                                                                    <i class="fa fa-check-square-o" aria-hidden="true"></i>
+                                                                    <p>CÒN HÀNG</p>
+                                                                }
+                                                                else
+                                                                {
+                                                                    <i class="fa fa-times" style="color:red" aria-hidden="true"></i>
+                                                                    <p style="color:red">HẾT HÀNG</p>
+                                                                }
+
+                                                            </span>
+                                                        </span>
+                                                    </div>
+                                                    <p class="description">
+                                                        
+                                                    </p>
+                                                    @*<div class="option has-border d-lg-flex size-color">
+                                                            <div class="size">
+                                                                <span class="size">kích cỡ :</span>
+                                                                <select>
+                                                                    <option value="">Chọn kích thước của bạn</option>
+                                                                    <option value="">110x55cm</option>
+                                                                    <option value="">200x75cm</option>
+
+                                                                </select>
+                                                            </div>
+                                                            <div class="colors">
+                                                                <b class="title">Màu : </b>
+                                                                <span class="blue"></span>
+                                                                <span class="yellow"></span>
+                                                                <span class="pink"></span>
+                                                                <span class="green"></span>
+                                                                <span class="brown"></span>
+                                                                <span class="red"></span>
+                                                            </div>
+                                                        </div>*@
+
+                                                    <div class="has-border cart-area">
+                                                        <div class="product-quantity">
+                                                            <div class="qty">
+                                                                <div class="input-group">
+                                                                    <div class="quantity">
+                                                                        <span class="control-label">QTY : </span>
+                                                                        <input type="text" name="qty" id="quantity_wanted" value="1" class="input-group form-control">
+
+                                                                        <span class="input-group-btn-vertical">
+                                                                            <button class="btn btn-touchspin js-touchspin bootstrap-touchspin-up" type="button">
+                                                                                +
+                                                                            </button>
+                                                                            <button class="btn btn-touchspin js-touchspin bootstrap-touchspin-down" type="button">
+                                                                                -
+                                                                            </button>
+                                                                        </span>
+                                                                    </div>
+                                                                    <span class="add">
+                                                                        <a class="addToWishlist" href="/ProductCartPage/AddItem?productId=@Model.Product_id&quantity=1">
+                                                                            <i class="fa fa-shopping-cart" aria-hidden="true"></i>
+                                                                        </a>
+                                                                        <a class="addToWishlist" href="#">
+                                                                            <i class="fa fa-heart" aria-hidden="true"></i>
+                                                                        </a>
+                                                                    </span>
+
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                        <div class="clearfix"></div>
+                                                        <p class="product-minimal-quantity">
+                                                        </p>
+                                                    </div>
+
+                                                    <div class="d-flex2 has-border">
+                                                        <div class="btn-group">
+                                                            <a href="#">
+                                                                <i class="zmdi zmdi-share"></i>
+                                                                <span>Chia sẻ</span>
+                                                            </a>
+                                                            <a href="#" class="email">
+                                                                <i class="fa fa-envelope" aria-hidden="true"></i>
+                                                                <span>CHIA SẺ CHO BẠN BÈ</span>
+                                                            </a>
+                                                            <a href="#" class="print">
+                                                                <i class="zmdi zmdi-print"></i>
+                                                                <span>IN</span>
+                                                            </a>
+                                                        </div>
+                                                    </div>
+                                                    <div class="rating-comment has-border d-flex">
+                                                        <div class="review-description d-flex">
+                                                            <span>ĐÁNH GIÁ :</span>
+                                                            <div class="rating">
+                                                                <div class="star-content">
+                                                                    <div class="star"></div>
+                                                                    <div class="star"></div>
+                                                                    <div class="star"></div>
+                                                                    <div class="star"></div>
+                                                                    <div class="star"></div>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                        <div class="read after-has-border">
+                                                            <a href="#review">
+                                                                <i class="fa fa-commenting-o color" aria-hidden="true"></i>
+                                                                <span>ĐỌC ĐÁNH GIÁ (3)</span>
+                                                            </a>
+                                                        </div>
+                                                        <div class="apen after-has-border">
+                                                            <a href="#review">
+                                                                <i class="fa fa-pencil color" aria-hidden="true"></i>
+                                                                <span>VIẾT ĐÁNH GIÁ</span>
+                                                            </a>
+                                                        </div>
+                                                    </div>
+                                                    <div class="content">
+                                                        <p>
+                                                            Mã hàng :
+                                                            <span class="content2">
+                                                                <a href="#">@Model.Code</a>
+                                                            </span>
+                                                        </p>
+                                                        <p>
+                                                            Loại sản phẩm :
+                                                            <span class="content2">
+                                                                
+                                                                <a href="#">@Model.getNameOfType(Model.Product_type)</a>
+                                                            </span>
+                                                        </p>
+                                                        <p>
+                                                          
+                                                        </p>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+
+                                        <div class="review">
+                                            <ul class="nav nav-tabs">
+                                                <li class="active">
+                                                    <a data-toggle="tab" href="#description" class="active show">Giới thiệu sản phẩm </a>
+                                                </li>
+                                                <li>
+                                                    <a data-toggle="tab" href="#tag"> Đặc điểm sản phẩm</a>
+                                                </li>
+                                                <li>
+                                                    <a data-toggle="tab" href="#review">Nhận xét</a>
+                                                </li>
+                                            </ul>
+
+                                            <div class="tab-content">
+                                                <div id="description" class="tab-pane fade in active show">
+                                                    <p>
+                                                        @Model.Info
+                                                    </p>
+                                                </div>
+
+                                                <div id="review" class="tab-pane fade">
+                                                    <div class="spr-form">
+                                                        <div class="user-comment">
+                                                          
+                                                        </div>
+                                                    </div>
+                                                    <form method="post" action="#" class="new-review-form">
+                                                        <input type="hidden" name="review[rating]" value="3">
+                                                        <input type="hidden" name="product_id">
+                                                        <h3 class="spr-form-title">Viết nhận xét</h3>
+                                                        <fieldset>
+                                                            <div class="spr-form-review-rating">
+                                                                <label class="spr-form-label">Đánh giá</label>
+                                                                <fieldset class="ratings">
+                                                                    <input type="radio" id="star5" name="rating" value="5" />
+                                                                    <label class="full" for="star5" title="Awesome - 5 stars"></label>
+                                                                    <input type="radio" id="star4half" name="rating" value="4 and a half" />
+                                                                    <input type="radio" id="star4" name="rating" value="4" />
+                                                                    <label class="full" for="star4" title="Pretty good - 4 stars"></label>
+                                                                    <input type="radio" id="star3half" name="rating" value="3 and a half" />
+                                                                    <input type="radio" id="star3" name="rating" value="3" />
+                                                                    <label class="full" for="star3" title="Meh - 3 stars"></label>
+                                                                    <input type="radio" id="star2half" name="rating" value="2 and a half" />
+                                                                    <input type="radio" id="star2" name="rating" value="2" />
+                                                                    <label class="full" for="star2" title="Kinda bad - 2 stars"></label>
+                                                                    <input type="radio" id="star1half" name="rating" value="1 and a half" />
+                                                                    <input type="radio" id="star1" name="rating" value="1" />
+                                                                    <label class="full" for="star1" title="Sucks big time - 1 star"></label>
+                                                                    <input type="radio" id="starhalf" name="rating" value="half" />
+                                                                </fieldset>
+                                                            </div>
+                                                        </fieldset>
+                                                        <fieldset class="spr-form-contact">
+                                                            <div class="spr-form-contact-name">
+                                                                <input class="spr-form-input spr-form-input-text form-control" value="" placeholder="Tên bạn">
+                                                            </div>
+                                                            <div class="spr-form-contact-email">
+                                                                <input class="spr-form-input spr-form-input-email form-control" value="" placeholder=" email">
+                                                            </div>
+                                                        </fieldset>
+                                                        <fieldset>
+                                                            <div class="spr-form-review-body">
+                                                                <div class="spr-form-input">
+                                                                    <textarea class="spr-form-input-textarea" rows="10" placeholder="Viết bình luận của bạn ở đây"></textarea>
+                                                                </div>
+                                                            </div>
+                                                        </fieldset>
+                                                        <div class="submit">
+                                                            <input type="submit" name="addComment" id="submitComment" class="btn btn-default" value="Submit Review">
+                                                        </div>
+                                                    </form>
+                                                </div>
+                                                <div id="tag" class="tab-pane fade in">
+                                                    @Model.Attribute
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="related">
+                                            <div class="title-tab-content  text-center">
+                                                <div class="title-product justify-content-start">
+                                                    <h2>Sản phẩm liên quan</h2>
+                                                </div>
+                                            </div>
+                                            <div class="tab-content">
+                                                <div class="row">
+                                                    @foreach (Product p in ViewBag.related3Products)
+                                                    {
+                                                        <div class="item text-center col-md-4">
+                                                            <div class="product-miniature js-product-miniature item-one first-item">
+                                                                <div class="thumbnail-container border">
+                                                                    <a href="product-detail.html">
+                                                                        <img class="img-fluid image-cover" src="@p.getImageProduct(0)" alt="img">
+                                                                        <img class="img-fluid image-secondary" src="@p.getImageProduct(1)" alt="img">
+                                                                    </a>
+                                                                    <div class="highlighted-informations">
+                                                                        <div class="variant-links">
+                                                                            <a href="#" class="color beige" title="Beige"></a>
+                                                                            <a href="#" class="color orange" title="Orange"></a>
+                                                                            <a href="#" class="color green" title="Green"></a>
+                                                                        </div>
+                                                                    </div>
+                                                                </div>
+                                                                <div class="product-description">
+                                                                    <div class="product-groups">
+                                                                        <div class="product-title">
+                                                                            <a href="product-detail.html">@p.Name</a>
+                                                                        </div>
+                                                                        <div class="rating">
+                                                                            <div class="star-content">
+                                                                                <div class="star"></div>
+                                                                                <div class="star"></div>
+                                                                                <div class="star"></div>
+                                                                                <div class="star"></div>
+                                                                                <div class="star"></div>
+                                                                            </div>
+                                                                        </div>
+                                                                        <div class="product-group-price">
+                                                                            <div class="product-price-and-shipping">
+                                                                                <span class="price">@p.Price_sell vnđ</span>
+                                                                            </div>
+                                                                        </div>
+                                                                    </div>
+                                                                    <div class="product-buttons d-flex justify-content-center">
+                                                                        <form action="#" method="post" class="formAddToCart">
+                                                                            <input type="hidden" name="id_product" value="1">
+                                                                            <a class="add-to-cart" href="/ProductCartPage/AddItem?productId=@p.Product_id&quantity=1" data-button-action="add-to-cart">
+                                                                                <i class="fa fa-shopping-cart" aria-hidden="true"></i>
+                                                                            </a>
+                                                                        </form>
+                                                                        <a class="addToWishlist" href="#" data-rel="1" onclick="">
+                                                                            <i class="fa fa-heart" aria-hidden="true"></i>
+                                                                        </a>
+                                                                        <a href="@Url.Action("Index","ProductDetailPage",new {id = p.Product_id})" class="quick-view hidden-sm-down" data-link-action="quickview">
+                                                                            <i class="fa fa-eye" aria-hidden="true"></i>
+                                                                        </a>
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    }
+
+                                                </div>
+                                            </div>
+
+                                        </div>
+
+                          
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+
+
+
+
+

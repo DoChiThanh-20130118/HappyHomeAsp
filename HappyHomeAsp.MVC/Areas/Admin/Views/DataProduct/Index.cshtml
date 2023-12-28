@@ -1,0 +1,100 @@
+﻿@using HappyHomeAsp.MVC.Models
+@using HappyHomeAsp.MVC.Controllers
+@{
+    ViewBag.Title = "Danh sách sản phẩm";
+}
+
+<!-- Content Header (Page header) -->
+<section class="content-header">
+    <div class="container-fluid">
+        <div class="row mb-2">
+            <div class="col-sm-6">
+                <h1>Danh sách sản phẩm</h1>
+            </div>
+            <div class="col-sm-6">
+                <ol class="breadcrumb float-sm-right">
+                    <li class="breadcrumb-item"><a href="#">Home</a></li>
+                    <li class="breadcrumb-item active">Danh sách sản phẩm</li>
+                </ol>
+            </div>
+        </div>
+    </div><!-- /.container-fluid -->
+</section>
+
+<!-- Main content -->
+<section class="content">
+    <div class="container-fluid">
+        <div class="row">
+            <div class="col-12">
+                <div class="card">
+                    <div class="card-header" style="margin-top: 10px;margin-bottom: -10px">
+                        <div class="form-group" style="width: 50%;float: left">
+                            <select class="form-control select2bs4">
+                                <option selected="selected" disabled="disabled">Tìm kiếm theo</option>
+                                <option>Sản Phẩm mới</option>
+                                <option>Sản Phẩm hot</option>
+                            </select>
+                        </div>
+                        <button class="btn btn-primary" style="float: right;" id="btnAdd"><a href="@Url.Action("Index","AddProduct","Index")" style="color: white">Thêm mới</a></button>
+                    </div>
+                    <!-- /.card-header -->
+                    <div class="card-body">
+                        <table id="example1" class="table table-bordered table-striped">
+                            <thead>
+                                <tr>
+
+                                    <th>Id </th>
+                                    <th>Tên sản phẩm </th>
+                                    <th>Danh mục </th>
+                                    <th>Màu sắc</th>
+                                    <th>Thương hiệu</th>
+                                    <th>Giá gốc</th>
+                                    <th>Giá bán</th>
+                                    <th>Tác vụ</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+
+                                @foreach (Product product in Model)
+                                {
+                                    <tr>
+                                        <td>@product.Product_id</td>
+                                        <td>
+                                            @product.Name
+                                        </td>
+                                        <td>
+                                           @product.getNameOfType(product.Product_type)
+                                        </td>
+                                        <td>@product.Color</td>
+                                        <td>@product.Brand</td>
+                                        <td>@product.Price</td>
+                                        <td>@product.Price_sell</td>
+                                        <td>
+
+                                            <button class="btn btn-info"><a href="@Url.Action("Index","Details",new {id = product.Product_id})" style="color: white"> Xem sản phẩm</button>
+                                            <button class="btn btn-success"><a href="@Url.Action("Edit","DataProduct",new {id = product.Product_id})" style="color: white">Chỉnh sửa</button>
+                                            <button class="btn btn-danger">Xoá </button>
+
+                                        </td>
+                                    </tr>
+
+
+
+                                }
+
+
+                            </tbody>
+
+                        </table>
+                    </div>
+                    <!-- /.card-body -->
+                </div>
+                <!-- /.card -->
+            </div>
+            <!-- /.col -->
+        </div>
+        <!-- /.row -->
+    </div>
+    <!-- /.container-fluid -->
+</section>
+<!-- /.content -->

@@ -1,0 +1,98 @@
+﻿@using HappyHomeAsp.MVC.Models
+@{
+    ViewBag.Title = "Dánh sách loại sản phẩm";
+}
+
+
+<!-- Content Header (Page header) -->
+<section class="content-header">
+    <div class="container-fluid">
+        <div class="row mb-2">
+            <div class="col-sm-6">
+                <h1>Loại Hàng Hoá</h1>
+            </div>
+            <div class="col-sm-6">
+                <ol class="breadcrumb float-sm-right">
+                    <li class="breadcrumb-item"><a href="#">Home</a></li>
+                    <li class="breadcrumb-item active">General Form</li>
+                </ol>
+            </div>
+        </div>
+    </div><!-- /.container-fluid -->
+</section>
+
+<!-- Main content -->
+<section class="content">
+    <div class="container-fluid">
+        <div class="row">
+            <div class="col-md-9">
+                <div class="card card-primary">
+                    <div class="card-header">
+                        <h3 class="card-title">Các loại hàng hoá</h3>
+                        <div class="card-tools">
+                            <button type="button" class="btn btn-tool" data-card-widget="collapse" title="Collapse">
+                                <i class="fas fa-minus"></i>
+                            </button>
+                        </div>
+                    </div>
+                    <div class="card-body" style="display: block; padding:0px ;">
+                        <form style="padding:10px">
+                            <table id="example1" class="table table-bordered table-striped">
+                                <thead>
+                                    <tr>
+                                        <th>Mã loại </th>
+                                        <th>Tên loại hàng</th>
+                                        <th>Tác vụ</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    @foreach (ProductType productType in ViewBag.listType)
+                                    {
+                                        <tr>
+                                            <td>@productType.type_id</td>
+                                            <td>
+                                                @productType.type
+                                            </td>
+
+                                            <td>
+                                                <button class="btn btn-danger">Xoá</button>
+                                                <a class="btn btn-success" href="edit-product.html">Sửa</a>
+                                            </td>
+                                        </tr>
+                                    }
+
+
+
+                                    </tfoot>
+                            </table>
+
+                        </form>
+                    </div>
+                    <!-- /.card-body -->
+                </div>
+            </div>
+            <div class="col-md-3">
+                <div class="card card-success">
+                    <div class="card-header">
+                        <h3 class="card-title">Thêm loại hàng</h3>
+                        <div class="card-tools">
+                            <button type="button" class="btn btn-tool" data-card-widget="collapse" title="Collapse">
+                                <i class="fas fa-minus"></i>
+                            </button>
+                        </div>
+                    </div>
+                    <div class="card-body" style="display: block">
+
+                        <a class="btn btn-success" href="@Url.Action("add_type","CategoryProduct")">Thêm loại sản phẩm</a>
+
+                    </div>
+                    <!-- /.card-body -->
+                </div>
+            </div>
+        </div>
+        <!-- /.row -->
+    </div><!-- /.container-fluid -->
+</section>
+
+
+<!-- /.content -->
