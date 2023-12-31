@@ -1,9 +1,11 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
-# Visual Studio Version 16
-VisualStudioVersion = 16.0.32802.440
+# Visual Studio Version 17
+VisualStudioVersion = 17.8.34309.116
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "HappyHomeAsp.MVC", "HappyHomeAsp.MVC\HappyHomeAsp.MVC.csproj", "{FEDBC567-CAF2-42D2-B636-1375A77E13A0}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "HappyHomeAspAPI", "HappyHomeAspAPI\HappyHomeAspAPI.csproj", "{751F09F2-BF70-4780-AD21-440C695D296D}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -15,6 +17,10 @@ Global
 		{FEDBC567-CAF2-42D2-B636-1375A77E13A0}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{FEDBC567-CAF2-42D2-B636-1375A77E13A0}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{FEDBC567-CAF2-42D2-B636-1375A77E13A0}.Release|Any CPU.Build.0 = Release|Any CPU
+		{751F09F2-BF70-4780-AD21-440C695D296D}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{751F09F2-BF70-4780-AD21-440C695D296D}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{751F09F2-BF70-4780-AD21-440C695D296D}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{751F09F2-BF70-4780-AD21-440C695D296D}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
