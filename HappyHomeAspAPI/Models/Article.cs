@@ -1,9 +1,11 @@
 ﻿using System.Collections;
+using System.ComponentModel.DataAnnotations;
 
 namespace HappyHomeAspAPI.Models
 {
     public class Article
     {
+
         private int article_id;
 
         private int article_category_id;
@@ -24,6 +26,7 @@ namespace HappyHomeAspAPI.Models
             this.Content = content;
         }
 
+        [Key]
         public int Article_id { get => article_id; set => article_id = value; }
         public int Article_category_id { get => article_category_id; set => article_category_id = value; }
         public string Title { get => title; set => title = value; }
