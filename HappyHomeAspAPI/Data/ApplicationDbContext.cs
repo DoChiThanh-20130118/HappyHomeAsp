@@ -10,10 +10,12 @@ namespace HappyHomeAspAPI.Data
         {
         }
         public DbSet<Article> Articles { get; set; }
+        public DbSet<ArticleCategory> ArticleCategories { get; set; }
 
-        protected override void OnModelCreating(ModelBuilder modelBuilder)
+    protected override void OnModelCreating(ModelBuilder modelBuilder)
         {
             modelBuilder.Entity<Article>().ToTable("article");
-        }
+            modelBuilder.Entity<ArticleCategory>().ToTable("article_category");
+    }
     }
 }
