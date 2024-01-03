@@ -25,6 +25,7 @@ builder.Services.AddScoped<IArticleCategoryRepository, ArticleCategoryRepository
 builder.Services.AddScoped<IProductTypeRepository, ProductTypeRepository>();
 builder.Services.AddScoped<IImgArticleRepository, ImgArticleRepository>();
 builder.Services.AddScoped<IImageRepository, ImageRepository>();
+builder.Services.AddScoped<ICartRepository, CartRepository>();
 
 
 var app = builder.Build();
