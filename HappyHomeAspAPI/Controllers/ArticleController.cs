@@ -1,5 +1,5 @@
 ﻿using HappyHomeAspAPI.Models;
-using HappyHomeAspAPI.Repositories;
+using HappyHomeAspAPI.Repositories.IRepository;
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
 

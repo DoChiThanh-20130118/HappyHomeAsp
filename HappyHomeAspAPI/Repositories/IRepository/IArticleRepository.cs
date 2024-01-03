@@ -1,6 +1,6 @@
 ﻿using HappyHomeAspAPI.Models;
 
-namespace HappyHomeAspAPI.Repositories
+namespace HappyHomeAspAPI.Repositories.IRepository
 {
     public interface IArticleRepository
     {

@@ -1,5 +1,6 @@
 using HappyHomeAspAPI.Data;
 using HappyHomeAspAPI.Repositories;
+using HappyHomeAspAPI.Repositories.IRepository;
 using Microsoft.EntityFrameworkCore;
 
 
@@ -22,6 +23,7 @@ builder.Services.AddDbContext<ApplicationDbContext>(options =>
 builder.Services.AddScoped<IArticleRepository, ArticleRepository>();
 builder.Services.AddScoped<IArticleCategoryRepository, ArticleCategoryRepository>();
 builder.Services.AddScoped<IProductTypeRepository, ProductTypeRepository>();
+builder.Services.AddScoped<IImgArticleRepository, ImgArticleRepository>();
 
 
 var app = builder.Build();
