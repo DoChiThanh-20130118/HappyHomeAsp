@@ -1,0 +1,6 @@
+@HappyHomeAspAPI_HostAddress = http://localhost:5073
+
+GET {{HappyHomeAspAPI_HostAddress}}/weatherforecast/
+Accept: application/json
+
+###
